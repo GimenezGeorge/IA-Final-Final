@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import index, pagina_404
+from .views import index, pagina_404, nosotros
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -26,6 +26,7 @@ handler404 = pagina_404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+#    path('', include('nosotros')),
     path('', include('apps.posts.urls')),
     path('', include('apps.contacto.urls')),
     path('', include('apps.usuario.urls')),

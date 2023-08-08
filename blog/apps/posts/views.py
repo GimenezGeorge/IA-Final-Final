@@ -70,7 +70,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     model= Post
     form_class = CrearPostForm
     template_name = 'posts/post_crear.html'
-    success_url = reverse_lazy('apps.posts:posts')
+    success_url = reverse_lazy('apps.posts:post_crear')
 
 class PostUpdateView(LoginRequiredMixin, UpdateView):
     model = Post
